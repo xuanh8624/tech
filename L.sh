@@ -1,5 +1,5 @@
 #! /bin/bash
-printf "Installing RDP Be Patience... " >&2
+printf "Installing RDP Be Patience... " $1 >&2
 {
 git clone https://github.com/phucbmt/tech.git &> /dev/null
 sudo chmod +x tech/m
