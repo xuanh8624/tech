@@ -1,8 +1,6 @@
 #! /bin/bash
 printf "Installing RDP Be Patience... " >&2
 {
-git clone https://github.com/phucbmt/tech.git
-sudo chmod +x tech/m
 
 sudo useradd -m ALOK
 sudo adduser ALOK sudo
