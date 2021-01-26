@@ -1,3 +1,3 @@
 #! /bin/bash
 
-printf "Installing RDP Be Patience... $1" 
+echo "Installing RDP Be Patience... $1" 
